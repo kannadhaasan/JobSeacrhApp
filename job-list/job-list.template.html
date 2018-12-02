@@ -1,0 +1,29 @@
+<div class="container-fluid">
+    <div class="row" >
+        <div class="col-md-3"></div>
+        <div class="col-md-6 input-group">
+            <h3 style="margin: 15px 20px;">Job title search</h3>
+            <form ng-submit="getJobs()">
+              <div class="input-group">
+                  <input type="text" ng-model="query" style="padding: 30px 10px;font-size: 20px"  class="form-control" placeholder="Search for...">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default"style="padding: 16px 10px;font-size: 20px" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                  </span>
+              </div>
+            </form>
+              <br>
+              <div ng-If="NotFoundMessage">
+                <h1>Result Not Found</h1>
+              </div>
+              <div ng-If="isResult">
+                  <h1>Result</h1>
+                  <div ng-repeat="job in jobs">
+                      <a href="#!/jobs/{{job.uuid}}" class="jobLink">
+                        {{job.normalized_job_title}}
+                      </a>
+                  </div>
+              </div>  
+          </div>
+    </div>
+
+</div>
