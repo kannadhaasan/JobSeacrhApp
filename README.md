@@ -1,6 +1,10 @@
 # Jobsearch App
 
-* This app provides list of related job avalable based on the search result and then for each job a detailed view of top 10 skills and top 5 related jobs
+* This app provides list of related job avalable based on the search result and then for each job it provides a detailed view of top 10 skills and top 5 related jobs
+
+## Technology Used:
+
+* Angular.JS, HTML, CSS, JavaScript
 
 ## Deployment steps in local machine
 * Step 1: Download the soruce code from https://github.com/kannadhaasan/JobSeacrhApp.git
