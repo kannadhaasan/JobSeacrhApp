@@ -4,7 +4,7 @@ angular.module('jobList').
   component('jobList', {
     templateUrl: 'job-list/job-list.template.html',
     controller: function JobListController($scope, JobsService) {
-      debugger;
+      
       
       if ($scope.query !== undefined) {
         JobsService.getJobs().then(function (response) {
@@ -13,10 +13,10 @@ angular.module('jobList').
       }
 
       $scope.getJobs = function () {
-        debugger;
+        
         if ($scope.query !== undefined) {
           JobsService.getJobs($scope.query).then(function (response) {
-            debugger;
+           
             $scope.jobs = response.data;
             $scope.isResult = true;
           }).catch(function (error) {
