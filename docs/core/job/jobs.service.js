@@ -7,16 +7,16 @@ angular.
       var factory = {};
 
       factory.getJobs = function (query) {
-        return $http.get('http://api.dataatwork.org/v1/jobs/autocomplete?contains=' + query);
+        return $http.get('https://api.dataatwork.org/v1/jobs/autocomplete?contains=' + query);
       }
       factory.getJobsByuuid = function (uuid) {
-        return $http.get('http://api.dataatwork.org/v1/jobs/' + uuid);
+        return $http.get('https://api.dataatwork.org/v1/jobs/' + uuid);
       }
       factory.getRelatedSkills = function (uuid) {
-        return $http.get('http://api.dataatwork.org/v1/jobs/' + uuid + "/related_skills");
+        return $http.get('https://api.dataatwork.org/v1/jobs/' + uuid + "/related_skills");
       }
       factory.getRelatedJobs = function (uuid) {
-        return $http.get('http://api.dataatwork.org/v1/jobs/' + uuid + "/related_jobs");
+        return $http.get('https://api.dataatwork.org/v1/jobs/' + uuid + "/related_jobs");
       }
       return factory;
     }
